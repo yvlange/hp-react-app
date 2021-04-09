@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Characters from "./components/Characters";
 import Home from "./components/Home";
+import SingleCharacter from "./components/SingleCharacter";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </header>
         <main className="main">
           <Switch>
+            <Route path="/characters/:characterLink">
+              <SingleCharacter />
+            </Route>
             <Route path="/characters">
               <Characters />
             </Route>
