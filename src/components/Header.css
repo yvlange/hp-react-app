@@ -1,17 +1,19 @@
 .header {
   grid-column: width;
   grid-row: header;
+  background-color: #241e4e;
 }
 
 .header-component {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: aqua;
   width: 100vw;
+  height: 80px;
 }
 
 .logo {
   height: 50px;
   width: 50px;
+  padding: 5px;
 }
