@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <div className="App">Rick & Morty</div>;
+  return <div className="App">Harry Potter</div>;
 }
 
 export default App;
