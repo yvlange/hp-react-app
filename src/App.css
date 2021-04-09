@@ -2,7 +2,7 @@
   height: 100vh;
   display: grid;
   place-items: center;
-  color: #04b1c5;
-  background-color: #111440;
-  font-size: 2em;
+  font-size: 16px;
+  grid-template-rows: [header] 80px [main] auto [footer] 80px;
+  grid-template-columns: [width] 100vw;
 }

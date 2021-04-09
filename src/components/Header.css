@@ -1,0 +1,19 @@
+.header {
+  grid-column: width;
+  grid-row: header;
+  background-color: #241e4e;
+}
+
+.header-component {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 80px;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  padding: 10px;
+}
