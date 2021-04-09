@@ -21,7 +21,9 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer className="footer"></footer>
+        <footer className="footer">
+          <p>made by a muggle</p>
+        </footer>
       </div>
     </Router>
   );

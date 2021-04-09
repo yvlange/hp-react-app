@@ -16,7 +16,15 @@ code {
   grid-column: width;
   grid-row: main;
 }
+
 .footer {
   grid-column: width;
   grid-row: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #241e4e;
+  color: #f2da79;
+  width: 100vw;
+  height: 80px;
 }
