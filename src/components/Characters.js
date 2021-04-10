@@ -76,7 +76,11 @@ export default function Characters() {
     <div className="charactersContent">
       <Filter onFilterStatus={filterStatus} onFilterName={filterName} />
       <div className="charactersList">{renderCharacters()}</div>
-      {page < totalPages && <button onClick={handleLoadMore}>Load more</button>}
+      {page < totalPages && (
+        <button className="loadMoreButton" onClick={handleLoadMore}>
+          Load more
+        </button>
+      )}
     </div>
   );
 }

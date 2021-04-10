@@ -20,11 +20,6 @@ code {
   overflow-y: scroll;
   background-color: #262c3a;
 }
-/* .main:after {
-  content: "";
-  display: block;
-  width: 100%;
-} */
 
 .footer {
   grid-column: width;
