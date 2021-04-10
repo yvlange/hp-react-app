@@ -1,0 +1,19 @@
+.search {
+  margin: 10px;
+}
+
+.searchByName {
+  padding: 10px;
+}
+
+.characterName {
+  border-radius: 5px;
+}
+
+.statusLabel {
+  margin-left: 50px;
+}
+
+.nameLabel {
+  margin-left: 50px;
+}

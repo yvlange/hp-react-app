@@ -6,7 +6,6 @@ export default function Header() {
   return (
     <div className="header-component">
       <img className="logo" src={rmicon} alt="logo" />
-
       <Navigation />
     </div>
   );

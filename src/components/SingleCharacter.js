@@ -1,7 +1,8 @@
+import "./SingleCharacter.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function SingleCharacter({ name, image, status, species }) {
+export default function SingleCharacter({ name }) {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
 
@@ -19,8 +20,8 @@ export default function SingleCharacter({ name, image, status, species }) {
     <div>
       <h2>{character.name}</h2>
       <img src={character.image} alt={name} />
-      <li>{character.status}</li>
-      <li>{character.species}</li>
+      <p>{character.status}</p>
+      <p>{character.species}</p>
     </div>
   );
 }

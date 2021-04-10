@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   grid-column: width;
   grid-row: header;
   background-color: #87d1db;

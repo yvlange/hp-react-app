@@ -1,11 +1,14 @@
 import "./Characters.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Filter from "./Filter";
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState();
+  const [filter, setFilter] = useState("all");
+  const [nameFilter, setNameFilter] = useState("");
 
   useEffect(() => {
     const url = `https://rickandmortyapi.com/api/character/?page=${page}`;
@@ -16,24 +19,51 @@ export default function Characters() {
         setCharacters((prevCharacters) => {
           return [...prevCharacters, ...data.results];
         });
-        console.log(data);
         setTotalPages(data.info.pages);
       });
   }, [page]);
 
-  function renderCharacters() {
-    return characters.map((character) => {
-      const { id, name, image } = character;
+  function filterStatus(filterValueStatus) {
+    if (filterValueStatus === "Alive") {
+      setFilter("Alive");
+    } else if (filterValueStatus === "Dead") {
+      setFilter("Dead");
+    } else if (filterValueStatus === "unknown") {
+      setFilter("unknown");
+    } else if (filterValueStatus === "all") {
+      setFilter("");
+    }
+  }
 
-      return (
-        <li key={id} className="characterBox">
-          <Link to={`/characters/${id}`}>
-            <img className="avatar" src={image} alt={name} />
-            <p className="characterName">{name} </p>
-          </Link>
-        </li>
-      );
-    });
+  function filterName(filterValueName) {
+    setNameFilter(filterValueName);
+  }
+
+  function renderCharacters() {
+    return characters
+      .filter((character) => {
+        return character.status === filter || filter === "all";
+      })
+      .filter((character) => {
+        return (
+          character.name.toLowerCase().includes(nameFilter.toLowerCase()) ||
+          nameFilter === ""
+        );
+      })
+      .map((character) => {
+        const { id, name, image, status } = character;
+
+        return (
+          <div key={id} className="characterItem">
+            <Link to={`/characters/${id}`}>
+              <div className={`${status}`}>
+                <img className="avatar" src={image} alt={name} />
+                <p className="characterName">{name} </p>
+              </div>
+            </Link>
+          </div>
+        );
+      });
   }
 
   function handleLoadMore() {
@@ -41,9 +71,10 @@ export default function Characters() {
       setPage(page + 1);
     }
   }
+
   return (
     <div className="charactersContent">
-      <h2>All Characters</h2>
+      <Filter onFilterStatus={filterStatus} onFilterName={filterName} />
       <div className="charactersList">{renderCharacters()}</div>
       {page < totalPages && <button onClick={handleLoadMore}>Load more</button>}
     </div>
