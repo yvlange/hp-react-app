@@ -2,15 +2,13 @@ import "./Characters.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// import SingleCharacter from "./SingleCharacter";
-
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState();
 
   useEffect(() => {
-    const url = "https://rickandmortyapi.com/api/character/?page=${page}";
+    const url = `https://rickandmortyapi.com/api/character/?page=${page}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -19,7 +17,7 @@ export default function Characters() {
           return [...prevCharacters, ...data.results];
         });
         console.log(data);
-        setTotalPages(data.totalPages);
+        setTotalPages(data.info.pages);
       });
   }, [page]);
 
@@ -51,12 +49,3 @@ export default function Characters() {
     </div>
   );
 }
-// <SingleCharacter
-//   key={character.id}
-//   name={character.name}
-//   species={character.species}
-//   house={character.house}
-//   patronus={character.patronus}
-//   wand={character.wand}
-//   pictureURL={character.image}
-// />

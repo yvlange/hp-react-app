@@ -1,31 +1,26 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function SingleCharacter({
-  name,
-  species,
-  house,
-  patronus,
-  wand,
-  pictureURL,
-}) {
-  const { characterLink } = useParams();
+export default function SingleCharacter({ name, image, status, species }) {
+  const { id } = useParams();
   const [character, setCharacter] = useState({});
 
-  function renderSingleCharacter() {
-    let id;
-  }
+  useEffect(() => {
+    const url = `https://rickandmortyapi.com/api/character/${id}`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setCharacter(data);
+      });
+  }, [id]);
+
   return (
     <div>
-      {characterLink}
-      <h2>{name}</h2>
-      <ul>
-        <li>{species}</li>
-        <li>{house}</li>
-        <li>{patronus}</li>
-        <li>{wand}</li>
-      </ul>
-      <img src={pictureURL} alt={name} />
+      <h2>{character.name}</h2>
+      <img src={character.image} alt={name} />
+      <li>{character.status}</li>
+      <li>{character.species}</li>
     </div>
   );
 }
