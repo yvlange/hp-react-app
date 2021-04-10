@@ -54,9 +54,9 @@ export default function Characters() {
         const { id, name, image, status } = character;
 
         return (
-          <div key={id} className="characterItem">
+          <div key={id} className={`characterItem ${status}`}>
             <Link to={`/characters/${id}`}>
-              <div className={`${status}`}>
+              <div className="characterItemCard">
                 <img className="avatar" src={image} alt={name} />
                 <p className="characterName">{name} </p>
               </div>

@@ -52,10 +52,10 @@
   transition: 0.5s;
 }
 
-.navigation a:first-child:before:hover {
+.navigation:hover a::before {
   transform: skewX(45deg) translateX(600%);
 }
-.navigation a:last-child:before:hover {
+.navigation:hover a::before {
   transform: skewX(45deg) translateX(600%);
 }
 

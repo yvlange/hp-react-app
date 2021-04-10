@@ -1,0 +1,26 @@
+.singleCharacterInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #87d1db;
+  border-radius: 50%;
+  color: #262c3a;
+  background-color: #e0dab2;
+  margin: 50px;
+  height: 400px;
+  width: 400px;
+}
+
+.singleCharacterPic {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border: 1px solid #262c3a;
+  border-radius: 50%;
+}
+
+.singleCharacterDetails {
+  padding-right: 30px;
+  list-style-type: none;
+}

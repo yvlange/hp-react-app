@@ -13,10 +13,18 @@ code {
 }
 
 .main {
+  display: flex;
+  justify-content: center;
   grid-column: width;
   grid-row: main;
   overflow-y: scroll;
+  background-color: #262c3a;
 }
+/* .main:after {
+  content: "";
+  display: block;
+  width: 100%;
+} */
 
 .footer {
   grid-column: width;
@@ -25,7 +33,7 @@ code {
   justify-content: center;
   align-items: center;
   background-color: #87d1db;
-  color: #333333;
+  color: #262c3a;
   width: 100vw;
   height: 80px;
 }

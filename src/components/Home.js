@@ -1,7 +1,9 @@
+import rickandmortywallpaper from "../images/rickandmortywallpaper.jpg";
+import "./Home.css";
 export default function Home() {
   return (
     <div className="home">
-      <p>This is home</p>
+      <img className="wallpaper" src={rickandmortywallpaper} alt="wallpaper" />
     </div>
   );
 }

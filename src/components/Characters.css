@@ -4,31 +4,58 @@
 }
 .charactersList {
   display: flex;
-  flex-flow: row wrap;
-  align-content: stretch;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .characterItem {
   display: flex;
   justify-content: space-around;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  margin: 20px;
+  overflow-x: auto;
+  border: 0.5px solid #262c3a;
+  border-radius: 50%;
+  margin: 10px;
+  height: 200px;
   width: 200px;
+  flex-grow: 1;
 }
 
 .avatar {
   width: 100px;
   height: 100px;
   margin: 5px;
-  border: 0.5px solid black;
-  border-radius: 5px;
+  border: 0.5px solid #262c3a;
+  border-radius: 50%;
 }
-
 .characterName {
+  margin: 0;
+  text-align: center;
+  padding-top: 5px;
   color: #333333;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .characterItem a {
   text-decoration: none;
+}
+
+.characterItemCard {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.Alive {
+  background-color: #cdfbbb;
+}
+
+.Dead {
+  background-color: #ff2020;
+}
+
+.unknown {
+  background-color: #d4d0d0;
 }

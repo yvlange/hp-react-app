@@ -17,11 +17,13 @@ export default function SingleCharacter({ name }) {
   }, [id]);
 
   return (
-    <div>
+    <div className="singleCharacterInfo">
+      <img className="singleCharacterPic" src={character.image} alt={name} />
       <h2>{character.name}</h2>
-      <img src={character.image} alt={name} />
-      <p>{character.status}</p>
-      <p>{character.species}</p>
+      <ul className="singleCharacterDetails">
+        <li>Status: {character.status}</li>
+        <li>Species: {character.species}</li>
+      </ul>
     </div>
   );
 }
