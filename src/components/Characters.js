@@ -31,7 +31,7 @@ export default function Characters() {
     } else if (filterValueStatus === "unknown") {
       setFilter("unknown");
     } else if (filterValueStatus === "all") {
-      setFilter("");
+      setFilter("all");
     }
   }
 
