@@ -1,7 +1,7 @@
 import "./Characters.css";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Filter from "./Filter";
+import CharacterCards from "./CharacterCards";
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -54,14 +54,7 @@ export default function Characters() {
         const { id, name, image, status } = character;
 
         return (
-          <div key={id} className={`characterItem ${status}`}>
-            <Link to={`/characters/${id}`}>
-              <div className="characterItemCard">
-                <img className="avatar" src={image} alt={name} />
-                <p className="characterName">{name} </p>
-              </div>
-            </Link>
-          </div>
+          <CharacterCards id={id} name={name} image={image} status={status} />
         );
       });
   }
