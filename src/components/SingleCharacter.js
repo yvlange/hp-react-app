@@ -12,27 +12,20 @@ export default function SingleCharacter({
   const { characterLink } = useParams();
   const [character, setCharacter] = useState({});
 
-  useEffect(() => {
-    const url = `http://hp-api.herokuapp.com/api/characters/${characterLink}`;
-
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setCharacter(data.data);
-      });
-  }, [characterLink]);
-
+  function renderSingleCharacter() {
+    let id;
+  }
   return (
     <div>
       {characterLink}
-      <h2>{character.name}</h2>
+      <h2>{name}</h2>
       <ul>
-        <li>{character.species}</li>
-        <li>{character.house}</li>
-        <li>{character.patronus}</li>
-        <li>{character.wand}</li>
+        <li>{species}</li>
+        <li>{house}</li>
+        <li>{patronus}</li>
+        <li>{wand}</li>
       </ul>
-      <img src={character.pictureURL} alt={name} />
+      <img src={pictureURL} alt={name} />
     </div>
   );
 }

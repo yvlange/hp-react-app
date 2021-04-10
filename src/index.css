@@ -15,6 +15,7 @@ code {
 .main {
   grid-column: width;
   grid-row: main;
+  overflow-y: scroll;
 }
 
 .footer {
@@ -23,8 +24,8 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #241e4e;
-  color: #f2da79;
+  background-color: #87d1db;
+  color: #333333;
   width: 100vw;
   height: 80px;
 }

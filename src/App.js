@@ -14,7 +14,7 @@ function App() {
         </header>
         <main className="main">
           <Switch>
-            <Route path="/characters/:characterLink">
+            <Route path="/characters/:id">
               <SingleCharacter />
             </Route>
             <Route path="/characters">

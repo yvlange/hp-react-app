@@ -1,12 +1,12 @@
 import "./Header.css";
-import hpLogo from "../images/hpLogo.png";
+import rmicon from "../images/rmicon.svg";
 import Navigation from "./Navigation";
 
 export default function Header() {
   return (
     <div className="header-component">
-      <img className="logo" src={hpLogo} alt="logo" />
-      {/* <h1>Harry Potter</h1> */}
+      <img className="logo" src={rmicon} alt="logo" />
+
       <Navigation />
     </div>
   );

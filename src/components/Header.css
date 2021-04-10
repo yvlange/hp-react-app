@@ -1,7 +1,7 @@
 .header {
   grid-column: width;
   grid-row: header;
-  background-color: #241e4e;
+  background-color: #87d1db;
 }
 
 .header-component {
