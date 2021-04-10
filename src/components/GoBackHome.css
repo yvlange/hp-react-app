@@ -1,0 +1,10 @@
+.goHomeBtn {
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #a3e688, 0 0 20px #c9f6b7, 0 0 40px #c9f6b7;
+  transition: 1s;
+}
+.goHomeBtn:hover {
+  background-color: #c9f6b7;
+}

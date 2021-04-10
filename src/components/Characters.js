@@ -2,6 +2,7 @@ import "./Characters.css";
 import { useEffect, useState } from "react";
 import Filter from "./Filter";
 import CharacterCards from "./CharacterCards";
+import GoBackHome from "./GoBackHome";
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -74,6 +75,7 @@ export default function Characters() {
           Load more
         </button>
       )}
+      <GoBackHome text="Home" />
     </div>
   );
 }
