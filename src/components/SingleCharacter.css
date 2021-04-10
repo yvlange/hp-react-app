@@ -18,6 +18,12 @@
   font-weight: 600;
   text-shadow: 0 0 10px #45f300, 0 0 20px #c9f6b7, 0 0 40px #c9f6b7,
     0 0 80px #c9f6b7, 0 0 120px #c9f6b7;
+  box-shadow: 0 0 10px #a3e688, 0 0 20px #c9f6b7, 0 0 40px #c9f6b7;
+  transition: 0.5s;
+}
+
+.singleCharacterInfo:hover {
+  letter-spacing: 3px;
 }
 
 .singleCharacterInfo::before {
