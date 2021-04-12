@@ -1,0 +1,103 @@
+.charactersList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.characterItem {
+  display: flex;
+  justify-content: space-around;
+  overflow-x: auto;
+  border: 0.5px solid #262c3a;
+  border-radius: 50%;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  flex-grow: 1;
+  box-shadow: 0.15px 15px rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 0 5px #a3e688, 0 0 10px #c9f6b7, 0 0 15px #c9f6b7;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: 2px solid #262c3a;
+  border-radius: 50%;
+}
+.characterName {
+  margin: 0;
+  text-align: center;
+  padding-top: 5px;
+  color: #27303c;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  font-weight: 600;
+  text-shadow: 0 0 10px #45f300, 0 0 20px #c9f6b7, 0 0 40px #c9f6b7,
+    0 0 80px #c9f6b7, 0 0 120px #c9f6b7;
+}
+
+.characterItem a {
+  text-decoration: none;
+}
+
+.characterItemCard {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 20px;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.characterItemCard::before {
+  content: " ";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.characterItemCard:hover:before {
+  transform: skewX(45deg) translateX(1000%);
+}
+
+.Alive {
+  background-color: #cdfbbb;
+  position: relative;
+  z-index: 1;
+}
+
+.Dead {
+  background-color: #ff2020;
+  position: relative;
+  z-index: 1;
+}
+
+.unknown {
+  background-color: #d4d0d0;
+  position: relative;
+  z-index: 1;
+}
+
+.loadMoreButton {
+  margin-left: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #a3e688, 0 0 20px #c9f6b7, 0 0 40px #c9f6b7;
+}
+
+.loadMoreButton:hover {
+  background-color: #c9f6b7;
+}

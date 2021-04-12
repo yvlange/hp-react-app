@@ -1,9 +1,51 @@
 .navigation {
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   flex-grow: 1;
+  height: 100%;
 }
 
-a {
-  color: #f2da79;
+.navigation a {
+  position: relative;
+  width: 120px;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0.15px 15px rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background-color: #2ac7db;
+  overflow: hidden;
+  transition: 0.5s;
+  font-weight: 600;
+  color: #262c3a;
+  text-shadow: 0 0 10px #9ffa7b, 0 0 20px #c9f6b7, 0 0 40px #c9f6b7,
+    0 0 80px #c9f6b7, 0 0 120px #c9f6b7;
+}
+
+.navigation a:hover {
+  letter-spacing: 3px;
+}
+
+.navigation a::before {
+  content: " ";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.navigation a:hover::before {
+  transform: skewX(45deg) translateX(600%);
 }

@@ -1,0 +1,35 @@
+.filterForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #87d1db;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.searchByName {
+  border-radius: 10px;
+  height: 15px;
+  width: 100px;
+}
+
+.statusLabel {
+  margin-left: 70px;
+  padding: 10px;
+}
+
+.nameLabel {
+  margin: 10px;
+}
+.nameButton {
+  padding: 0;
+  width: 40px;
+  height: 20px;
+  background-color: #87d1db;
+  border-radius: 10px;
+}
+
+.nameButton:hover {
+  background-color: #c9f6b7;
+}

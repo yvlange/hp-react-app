@@ -13,8 +13,12 @@ code {
 }
 
 .main {
+  display: flex;
+  justify-content: center;
   grid-column: width;
   grid-row: main;
+  overflow-y: scroll;
+  background-color: #262c3a;
 }
 
 .footer {
@@ -23,8 +27,10 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #241e4e;
-  color: #f2da79;
+  background-color: #87d1db;
+  color: #262c3a;
   width: 100vw;
   height: 80px;
+  font-weight: 200;
+  font-size: 14px;
 }
