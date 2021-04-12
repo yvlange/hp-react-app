@@ -25,15 +25,7 @@ export default function Characters() {
   }, [page]);
 
   function filterStatus(filterValueStatus) {
-    if (filterValueStatus === "Alive") {
-      setFilter("Alive");
-    } else if (filterValueStatus === "Dead") {
-      setFilter("Dead");
-    } else if (filterValueStatus === "unknown") {
-      setFilter("unknown");
-    } else if (filterValueStatus === "all") {
-      setFilter("all");
-    }
+    setFilter(filterValueStatus);
   }
 
   function filterName(filterValueName) {
